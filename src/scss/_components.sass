@@ -1,7 +1,10 @@
 .container
+    width: 100%
     max-width: 1375px
-    margin: 0 auto
+    margin-left: auto
+    margin-right: auto
 
+//    buttons
 .btn
     font-family: 'PanamaRegular', serif
     font-size: 24px
@@ -11,6 +14,8 @@
     background: transparent
     border: none
     cursor: pointer
+    outline: none !important
+
     &.active
         text-decoration: underline
     &.black
@@ -29,11 +34,7 @@
         box-shadow: none
 
 
-img
-    display: block
-    width: 100%
-    max-width: 100%
-
+//  tabs
 .tab
     margin: 0 16px
     cursor: pointer
@@ -48,6 +49,7 @@ img
         overflow: hidden
 
 
+//  labels
 .labels
     font-family: 'PanamaRegular', serif
     font-size: 32px
@@ -61,6 +63,8 @@ img
         border-radius: 50%
         padding: 8px 27px 4px
 
+
+//  inputs
 .input_wrapper
     position: relative
     height: var(--inputHeight)

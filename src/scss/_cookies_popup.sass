@@ -21,6 +21,7 @@
 
   &_title
     font-size: 24px
+
   &_p
 
   &_close
@@ -29,3 +30,30 @@
 
     path
       stroke: var(--white)
+
+
+  &_settings
+    display: flex
+    position: fixed
+    background-color: var(--white)
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: 10
+
+    justify-content: space-between
+    padding-top: 240px
+    padding-bottom: 200px
+
+    overflow: auto
+
+
+    &__content
+      max-width: 675px
+      width: 100%
+      height: max-content
+      border: 1px solid var(--black)
+      margin: 0 auto
+      padding: 55px
+
