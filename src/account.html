@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('_head.html')
+<body>
+    @@include('_header.html')
+    <main class="main">
+       <section class="account">
+         <div class="container">
+            <div class="account_wrapper">
+               <h3 class="account_wrapper_title">личный кабинет</h3>
+               <div class="account_tabs">
+                  <a href="" class="tab active">персональная информация</a>
+                  <a href="" class="tab">мои заказы</a>
+               </div>
+               <div class="account_tabs_content">
+                  <div class="account_tabs_content_top">
+                     <h3>Анна Сосновская</h3>
+                     <button class="edit_button" data-id="form_account">редактировать</button>
+                     <button class="save_button" data-id="form_account" hidden>сохранить</button>
+                  </div>
+                  <form id="form_account" class="account_tabs_content_form">
+                     <div class="input_wrapper">
+                        <!-- necessarily placeholder=" " in input with 1 space -->
+                        <input id="input_btday" class="input" type="text" name="btday" value="22/03/1989 г." placeholder=" " readonly>
+                        <div class="border_bottom"></div>
+                        <label class="label" for="input_btday">Дата рождения</label>
+                     </div>
+                     <div class="input_wrapper_line">
+                        <div class="input_wrapper">
+                           <input id="input_phone" class="input" type="text" name="phone" value="+ 380 93 388 38 38" placeholder=" " readonly>
+                           <div class="border_bottom"></div>
+                           <label class="label" for="input_phone">Номер телефона</label>
+                        </div>
+                        <div class="input_wrapper">
+                           <input id="input_email" class="input" type="text" name="email" value="mail@mail.com" placeholder=" " readonly>
+                           <div class="border_bottom"></div>
+                           <label class="label" for="input_email">Электронный адрес</label>
+                        </div>
+                     </div>
+                     <div class="input_wrapper">
+                        <input id="input_password" class="input" type="password" name="password" value="password" placeholder=" " readonly>
+                        <div class="border_bottom"></div>
+                        <label class="label" for="input_password">Электронный адрес</label>
+                     </div>
+                  </form>
+               </div>
+               <div class="account_tabs_content">
+                  <div class="account_tabs_content_top">
+                     <h3>Адрес доставки</h3>
+                  </div>
+                  <div class="account_tabs_content_descr">
+                     Вы можете добавить адрес для доставки. Мы будем его автоматически подставлять при оформлении заказа.
+                  </div>
+                  <button class="black">добавить</button>
+               </div>
+            </div>
+         </div>
+       </section>
+    </main>
+    @@include('_footer.html')
+</body>
+</html>

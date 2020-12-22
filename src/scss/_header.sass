@@ -1,0 +1,70 @@
+header
+  border-bottom: 1px solid var(--black)
+  margin-bottom: 40px
+  .header
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 40px 0
+    &_logo
+      max-width: 30%
+      svg
+        width: 100%
+        height: auto
+    &_link_hide
+      transition: var(--fastTransition)
+    &_info
+      display: flex
+      align-items: center
+      &.show_search
+        .header_link_hide
+          transition: var(--basicTransition)
+          visibility: hidden
+          opacity: 0
+      &_item
+        margin-left: 24px
+        &.header_search
+          display: flex
+          align-items: center
+          justify-content: flex-end
+          margin-right: 0
+          margin-bottom: 0
+          padding: 0
+          cursor: pointer
+          img
+            width: 16px
+          &::before
+            content: ''
+            position: absolute
+            bottom: 0
+            right: 0
+            width: 0%
+            height: 1px
+            background-color: var(--black)
+            transition: var(--basicTransition)
+          input
+            width: 0
+            pointer-events: none
+            user-select: none
+            transition: var(--basicTransition)
+          &.active
+            &::before
+              width: 100%
+            input
+              width: 260px
+              margin-left: 16px
+              pointer-events: auto
+              user-select: auto
+    &_checkout
+      position: relative
+      &_count
+        font-family: 'Arial'
+        color: var(--white)
+        background-color: var(--black)
+        font-size: 8px
+        line-height: 9px
+        border-radius: 50%
+        position: absolute
+        top: -5px
+        right: -9px
+        padding: 0 4px

@@ -1,0 +1,239 @@
+body
+    font-size: 18px
+    box-sizing: border-box
+    margin: 0
+    font-family: 'Arial', serif
+    color: var(--black)
+    --header-height: 165px
+.container
+    max-width: 1376px
+    margin: 0 auto
+@import '_variables'
+@import '_fonts'
+@import '_typography'
+@import "_header"
+@import "_footer"
+@import '_components'
+@import '_animation'
+@import '_modal'
+.home, .product
+    header
+        border-bottom: none
+        margin-bottom: 0
+.banner
+    position: relative
+    margin-bottom: 64px
+    max-height: 740px
+    overflow-y: hidden
+    &_info
+        position: absolute
+        height: 100%
+        top: 0
+        padding-top: 33px
+        transition: var(--basicTransition)
+        z-index: 2
+        box-sizing: border-box
+        &_hover
+            position: absolute
+            top: 0
+            height: 100%
+            opacity: 0
+            visibility: hidden
+            transition: var(--basicTransition)
+            img
+                height: 100%
+                width: auto
+        &:hover
+            .banner_info_text
+                opacity: 0
+                visibility: hidden
+            .banner_info_hover
+                opacity: 1
+                visibility: visible
+    &_numb
+        margin-bottom: 16px
+    &_name
+        margin-bottom: 16px
+.catalog
+    &_tabs_wrapper
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-bottom: 32px
+        &_block
+            display: flex
+            align-items: center
+    &_wrapper
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        grid-gap: 30px
+        margin-bottom: 48px
+    &_item
+        position: relative
+        font-family: 'PanamaBold'
+        &_info
+            position: absolute
+            padding: 24px
+            top: 0
+            left: 0
+            width: 100%
+            visibility: hidden
+            opacity: 0
+            transition: var(--basicTransition)
+            max-width: 350px
+        &:hover .catalog_item_info
+            visibility: visible
+            opacity: 1
+        &_title
+            position: relative
+            background-color: var(--black)
+            color: var(--white)
+            display: inline
+            left: 8px
+            box-shadow: 0px 0 0 8px var(--black), 0px 0 0 8px var(--black), 0 0 0 8px var(--black)
+        &_size
+            position: relative
+            top: 16px
+            padding: 8px
+            background-color: var(--white)
+            width: max-content
+            margin-bottom: 26px
+        &_price
+            position: relative
+            width: max-content
+            span
+                color: var(--white)
+                background-color: var(--black)
+                border-radius: 50%
+                padding: 11px 10px
+                width: max-content
+                font-family: 'PanamaRegular'
+                line-height: 1
+                display: inline-block
+                &.old
+                    position: absolute
+                    top: calc(100% - 20px)
+                    left: 30%
+                &.new
+                    background-color: var(--white)
+                    color: var(--black)
+                    border: 1px solid var(--black)
+    &_popular
+        background-color: var(--black)
+        color: var(--white)
+        padding: 48px 0
+        margin-bottom: 48px
+        &_wrapper
+            display: grid
+            grid-template-columns: 5fr 5fr 2fr
+            grid-gap: 30px
+        &_img
+            border-bottom-left-radius: 50%
+            border-top-left-radius: 50%
+            overflow: hidden
+        &_info
+            padding-top: 46px
+            h1
+                margin-bottom: 16px
+        &_link
+            align-self: self-end
+            a
+                float: right
+                color: var(--white)
+
+.product
+    &_wrapper
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-gap: 30px
+        margin-bottom: 100px
+    &_info
+        &_item
+            border-bottom: 1px solid var(--black)
+            &:last-child
+                border-bottom: none
+        &_top
+            display: flex
+            padding-top: 15px
+            padding-bottom: 30px
+        &_price
+            .old
+                text-decoration: line-through
+                margin-right: 20px
+        &_share
+            width: 22px
+            margin-left: 30px
+            position: relative
+            cursor: pointer
+            height: max-content
+            &_links
+                position: absolute
+                top: 100%
+                right: 0
+                background-color: var(--black)
+                width: auto
+                height: auto
+                margin-top: 5px
+                padding: 16px 16px 6px
+                opacity: 0
+                visibility: hidden
+                user-select: none
+                point-events: none
+                transition: var(--basicTransition)
+                transform: translateY(50px)
+                a
+                    color: var(--white)
+                    margin-bottom: 10px
+            &:hover
+                .product_info_share_links
+                    opacity: 1
+                    visibility: visible
+                    transform: translateY(0)
+        &_shop
+            padding: 24px 0 32px
+            &_top
+                display: flex
+                justify-content: space-between
+                align-items: center
+                margin-bottom: 24px
+            &_none
+                font-size: 32px
+                text-transform: uppercase
+                font-family: 'PanamaRegular'
+            &_descr
+                margin-bottom: 24px
+                max-width: 350px
+            &_buy
+                margin-right: 32px
+        &_links
+            padding: 32px 0
+            display: grid
+            grid-template-columns: 1fr 1fr
+            grid-gap: 10px 50px
+            width: max-content
+.account
+    &_wrapper
+        max-width: 60%
+        margin: 0 auto
+        padding-top: 60px
+        margin-bottom: 100px
+        &_title
+            margin-bottom: 35px
+    &_tabs
+        display: flex
+        align-items: center
+        margin-bottom: 43px
+        &_content
+            margin-bottom: 50px
+            border: 1px solid var(--black)
+            padding: 48px
+            &_top
+                display: flex
+                align-items: center
+                justify-content: space-between
+                margin-bottom: 24px
+            &_descr
+                max-width: 580px
+                margin-bottom: 40px
+            &_form
+                margin-bottom: -25px
