@@ -1,5 +1,5 @@
 %title
-    font-family: 'PanamaRegular'
+    font-family: 'PanamaRegular', serif
     text-transform: uppercase
     margin: 0
 h1
@@ -14,3 +14,33 @@ h3
 h4
     font-size: 32px
     @extend %title
+
+a
+    color: inherit
+
+.link
+    color: var(--black)
+    font-size: 24px
+    font-family: 'PanamaRegular', serif
+    text-transform: uppercase
+    text-decoration: none
+    background: transparent
+    border: none
+    display: block
+    cursor: pointer
+    position: relative
+    padding-bottom: 1px
+
+
+.link_underline
+    &::before
+        content: ''
+        position: absolute
+        bottom: 0
+        width: 0
+        height: 1px
+        background-color: var(--black)
+        transition: var(--basicTransition)
+    &:hover
+        &::before
+            width: 100%

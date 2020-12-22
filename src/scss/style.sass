@@ -5,17 +5,22 @@ body
     font-family: 'Arial', serif
     color: var(--black)
     --header-height: 165px
-.container
-    max-width: 1376px
-    margin: 0 auto
+
+svg
+    display: block
+
+
 @import '_variables'
 @import '_fonts'
 @import '_typography'
-@import "_header"
-@import "_footer"
+@import '_header'
+@import '_footer'
 @import '_components'
 @import '_animation'
-@import '_modal'
+@import '_popup'
+@import '_cookies_popup'
+
+
 .home, .product
     header
         border-bottom: none
@@ -107,7 +112,7 @@ body
                 border-radius: 50%
                 padding: 11px 10px
                 width: max-content
-                font-family: 'PanamaRegular'
+                font-family: 'PanamaRegular', serif
                 line-height: 1
                 display: inline-block
                 &.old
@@ -178,7 +183,7 @@ body
                 opacity: 0
                 visibility: hidden
                 user-select: none
-                point-events: none
+                pointer-events: none
                 transition: var(--basicTransition)
                 transform: translateY(50px)
                 a
@@ -199,7 +204,7 @@ body
             &_none
                 font-size: 32px
                 text-transform: uppercase
-                font-family: 'PanamaRegular'
+                font-family: 'PanamaRegular', serif
             &_descr
                 margin-bottom: 24px
                 max-width: 350px

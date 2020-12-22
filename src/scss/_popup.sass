@@ -1,4 +1,4 @@
-.modal
+.popup
     position: fixed
     top: 0
     left: 0
@@ -10,7 +10,7 @@
     transition-delay: var(--basicTransition)
     opacity: 0
     visibility: hidden
-    point-events: none
+    pointer-events: none
     user-select: none
     &_content
         width: 100%
@@ -22,12 +22,14 @@
             display: grid
             grid-template-columns: 1fr 1fr
             grid-gap: 50px
+    &_close
+        cursor: pointer
     &.active
         opacity: 1
         visibility: visible
-        point-events: all
+        pointer-events: all
         user-select: all
         transition-delay: 0s
-        .modal_content
+        .popup_content
             transition-delay: var(--basicTransition)
             transform: translateX(0)

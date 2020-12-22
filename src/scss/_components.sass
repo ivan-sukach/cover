@@ -1,31 +1,9 @@
-a,
-.link
-    color: var(--black)
-    font-size: 24px
-    font-family: 'PanamaRegular'
-    text-transform: uppercase
-    text-decoration: none
-    background: transparent
-    padding: 0
-    border: none
-    display: block
-    cursor: pointer
-    position: relative
-    padding-bottom: 1px
-.link_underline
-    &::before
-        content: ''
-        position: absolute
-        bottom: 0
-        width: 0%
-        height: 1px
-        background-color: var(--black)
-        transition: var(--basicTransition)
-    &:hover
-        &::before
-            width: 100%
-button, .btn
-    font-family: 'PanamaRegular'
+.container
+    max-width: 1375px
+    margin: 0 auto
+
+.btn
+    font-family: 'PanamaRegular', serif
     font-size: 24px
     line-height: 1
     padding: 8px 8px 4px
@@ -49,9 +27,13 @@ button, .btn
     &:focus, &:active
         outline: none
         box-shadow: none
+
+
 img
     display: block
     width: 100%
+    max-width: 100%
+
 .tab
     margin: 0 16px
     cursor: pointer
@@ -64,8 +46,10 @@ img
         color: var(--white)
         background-color: var(--black)
         overflow: hidden
+
+
 .labels
-    font-family: 'PanamaRegular'
+    font-family: 'PanamaRegular', serif
     font-size: 32px
     line-height: 1
     display: inline-block
@@ -76,6 +60,7 @@ img
         color: var(--white)
         border-radius: 50%
         padding: 8px 27px 4px
+
 .input_wrapper
     position: relative
     height: var(--inputHeight)
@@ -96,7 +81,7 @@ img
         padding: 0
         &:read-only
             ~ .border_bottom
-                width: 0%
+                width: 0
         &:focus, &:active, &:not(:placeholder-shown)
             outline: none
             box-shadow: none

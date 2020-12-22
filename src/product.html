@@ -2,7 +2,7 @@
 <html lang="en">
 @@include('_head.html')
 <body class="product">
-    @@include('svg_templates/_header_min.html')
+    @@include('_header_min.html')
     <main class="main">
         <section class="product">
             <div class="container">
@@ -34,7 +34,7 @@
                                     <div class="label active" href="">M</div>
                                     <div class="label" href="">L</div>
                                 </div>
-                                <a href="">> Таблица размеров</a>
+                                <button href="" class="link button_popup" data-id="size_product">> Таблица размеров</button>
                             </div>
                             <p class="product_info_shop_descr">
                                 На модели размер: M <br>
@@ -55,6 +55,7 @@
             </div>
         </section>
     </main>
+    @@include('popup_size_product.html')
     @@include('_footer.html')
 </body>
 </html>
