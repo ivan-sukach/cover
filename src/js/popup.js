@@ -38,4 +38,4 @@ function initCookies(){
       }, 2000);
    }
 }
-initCookies()
+initCookies();

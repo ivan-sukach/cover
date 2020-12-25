@@ -32,8 +32,10 @@
       stroke: var(--white)
 
 
+
+
+
   &_settings
-    display: flex
     position: fixed
     background-color: var(--white)
     top: 0
@@ -41,13 +43,25 @@
     right: 0
     bottom: 0
     z-index: 10
-
+    display: flex
     justify-content: space-between
     padding-top: 240px
     padding-bottom: 200px
 
     overflow: auto
+    transform: translateY(100%)
+    opacity: 1
+    visibility: hidden
+    pointer-events: none
+    user-select: none
+    transition: var(--basicTransition)
 
+    &.active
+      transform: translateY(0)
+      opacity: 1
+      visibility: visible
+      pointer-events: all
+      user-select: auto
 
     &__content
       max-width: 675px
